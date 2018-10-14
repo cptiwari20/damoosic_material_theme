@@ -1,0 +1,49 @@
+@import './materialize';
+
+$header-bg: url(../img/pattern.jpeg);
+$header-height: 300px;
+
+@function set-text-color($color){
+  @if(lightness($color) > 50){
+    @return #000000;
+  }@else{
+    @return #ffffff;
+  }
+}
+
+body{
+  background-color: $primary-color;
+  color: set-text-color($primary-color);
+}
+.main-header{
+  background-image: $header-bg;
+  height: $header-height;
+  color: #fff;
+  margin-bottom: 30px;
+  h1{
+    padding-top: 20px;
+    margin: 0;
+  }
+}
+
+.img-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+}
+.card-content{
+  color: $primary-color;
+}
+
+.page-footer{
+  background: $secondary-color;
+  .footer-copyright{
+    color: #fff;
+  }
+}
+ // .row-1,
+ // .row-2,
+ // .row-3{
+ //   opacity: 0;
+ // }
